@@ -1,0 +1,59 @@
+.component.post {
+  >article {
+    >header {
+      >h1 {
+        @include text-heading-1;
+        line-height: 28px;
+      }
+    }
+
+    >section {
+      @include text-body-1;
+
+      margin-top: 10px;
+      line-height: 21px;
+
+      h1,h2,h3 {
+        @include text-heading-2;
+        margin: 20px 0 10px 0;
+      }
+
+      p {
+        margin: 10px 0;
+      }
+
+      em {
+        font-weight: bold;
+      }
+
+      ul {
+        @include text-list-1;
+        list-style: disc;
+        padding-left: 20px;
+      }
+
+      img {
+        float: right;
+        margin-left: 10px;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 3px #666;
+      }
+
+      .gist {
+        line-height: 20px;
+      }
+
+      blockquote {
+        @include text-body-1;
+        font-size: 20px;
+        font-weight: 700;
+        width: 200px;
+        float: right;
+        margin: 0 0 20px 40px;
+        text-align: left;
+        line-height: 28px;
+      }
+
+    }
+  }
+}

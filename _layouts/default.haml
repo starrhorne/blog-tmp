@@ -1,0 +1,71 @@
+!!! 5
+%html
+  %head
+    %title== {{ page.title }} - Starr Horne: Seattle Web Developer
+    %meta{:"http-equiv" => "content-type", :content => "text/html; charset=utf-8"}
+    %meta{:name => "author", :content => "Starr Horne"}
+    %meta{:name => "description", :content => "{{ page.description }}"}
+    %link{:href => "/atom.xml", :rel => "alternate", :title => "Starr Horne", :type => "application/atom+xml"}
+    %link{:href => "/favicon.ico", :rel => "shortcut icon", :type => "image/x-icon"}/
+    %link{:href => "http://fonts.googleapis.com/css?family=Carter+One|Nunito:400,700", :rel => "stylesheet", :type => "text/css"}/
+    %link{:rel => "stylesheet", :href => "/stylesheets/screen.css", :type => "text/css"}
+    %link{:rel => "stylesheet", :href => "/stylesheets/syntax.css", :type => "text/css"}
+
+    /[if lt IE 9]
+      %script{:src => "//html5shim.googlecode.com/svn/trunk/html5.js" }
+
+  %body
+    .component.social
+      .plus
+        %g:plusone{:size => "tall"}
+      .twitter
+        %a.twitter-share-button{"data-count" => "none", "data-via" => "starrhorne", :href => "https://twitter.com/share"} Tweet
+        :javascript
+          !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+        
+    .component.page
+
+      %header
+        .breadcrumbs
+          == {% if page.url != "/index.html" %}
+          %a{:href => "/"} &laquo; Home
+          == {% endif %}
+        %img{:src => "/images/avatar.png"}
+        .details
+
+          %h1 Starr Horne
+
+          %h2 Building quality front ends for rails apps since 1963
+
+          .social
+            %a{:href => 'https://github.com/starrhorne'} Github
+            |
+            %a{:href => 'https://twitter.com/starrhorne'} Twitter
+            |
+            %a{:href => 'https://plus.google.com/116880398648173252931', :rel => 'me'} Google+
+            |
+            %a{:href => 'http://www.linkedin.com/pub/starr-horne/5/6a/815'} LinkedIn
+            |
+            %a{:href => 'mailto:snhorne@chromahq.com'} Email Me
+
+      %section
+        == {{ content }}
+
+    :javascript
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-28986019-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+      (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      })();
+
+

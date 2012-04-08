@@ -1,0 +1,36 @@
+@import "compass/reset";
+@import "compass/utilities/general/clearfix";
+@import "styleguide/text";
+@import "components/page";
+@import "components/post";
+@import "components/related_posts";
+@import "components/index";
+@import "components/social";
+
+
+@import url(http://fonts.googleapis.com/css?family=Gudea:400,700);
+@import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700);
+
+html {
+  background: url("/images/bg.png");
+  font-family: $font-body;
+  font-weight: 400;
+}
+
+.gist {
+  font-size: 12px;
+  margin: 10px 0;
+}
+
+header, section, footer, nav, article {
+  display: block;
+}
+
+a, a:visited, a:active {
+  color: #EA1205;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

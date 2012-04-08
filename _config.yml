@@ -1,0 +1,3 @@
+markdown: rdiscount
+pygments: true
+exclude: Gemfile, Gemfile.lock Rakefile, config.rb, config.ru, Guardfile, Procfile

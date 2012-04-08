@@ -1,0 +1,44 @@
+$font-heading: 'Carter One', sans-serif;
+$font-list: 'Nunito', serif;;
+$font-body: 'Nunito', serif;
+
+
+h1, h2, h3, h4, h5 {
+  text-rendering: optimizelegibility;
+}
+
+@mixin text-body-1 {
+  font-family: $font-body;
+  font-weight: 400;
+  font-size: 16px;
+  color: #333;
+}
+
+@mixin text-body-2 {
+  font-family: $font-body;
+  font-weight: 400;
+  font-size: 12px;
+  color: #333;
+}
+
+@mixin text-heading-1 {
+  font-family: $font-heading;
+  font-weight: 400;
+  font-size: 28px;
+  color: #000;
+  text-shadow: 1px 1px 0px #fff;
+}
+
+@mixin text-heading-2 {
+  font-family: $font-heading;
+  font-weight: 400;
+  font-size: 20px;
+  color: #000;
+  text-shadow: 1px 1px 0px #fff;
+}
+
+@mixin text-list-1 {
+  font-family: $font-list;
+  font-weight: 400;
+  font-size: 16px;
+}

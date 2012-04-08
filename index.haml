@@ -1,0 +1,21 @@
+---
+title: Starr Horne - Seattle Rails Developer
+description: Starr Horne, A rails developer in Seattle, WA provides Rails Tips, UX/UI tutorials, and advice on lessons learned.
+layout: default
+---
+
+.component.index
+
+  %h1 Blog Posts
+
+  %ul.posts
+    == {% for post in site.posts %}
+    %li
+      %h1
+        %a{:href => "{{ post.url }}"}== {{ post.title }}
+
+      .date== {{ post.date | date_to_string }} 
+
+      .excerpt== {{ post.excerpt }}
+
+    == {% endfor %}

@@ -1,0 +1,30 @@
+.component.related-posts {
+
+  border: 1px solid #ccc;
+  padding: 20px;
+  background: #f0f0f0 url(/images/diagonal_stripes.png);
+  margin: 20px 0;
+
+  &> aside {
+    &> header {
+      &> h1 {
+        @include text-heading-2;
+        margin-bottom: 10px;
+      }
+    }
+    &> nav {
+      &> ul {
+        &> li {
+
+          list-style-type: disc;
+          list-style-position: inside;
+          margin: 5px 0;
+          @include text-body-2;
+
+          &> a {
+          }
+        }
+      }
+    }
+  }
+}

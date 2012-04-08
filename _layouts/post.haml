@@ -1,0 +1,41 @@
+\---
+layout: default
+\---
+
+.component.post
+  %article{ :itemscope => "", :itemtype => "http://schema.org/BlogPosting" }
+    %meta{ :itemprop => "author", :content => "Starr Horne" }
+    %meta{ :itemprop => "description", :content => "{{ page.description }}" }
+    %meta{ :itemprop => "datePublished", :content => "{{ page.date }}" }
+    %meta{ :itemprop => "url", :content => "http://www.starrhorne.com{{ page.url }}" }
+    %header
+      %h1{ :itemprop => "name" }== {{ page.title }}
+    %section{ :itemprop => "articleBody" }
+      == {{ content }}
+
+.component.related-posts
+  %aside
+    %header
+      %h1 Related Posts
+    %nav
+      %ul
+        {% for post in site.related_posts limit:3 %}
+        %li
+          %a{:href => "{{ post.url }}"}=={{ post.title }}
+        {% endfor %}
+
+.component.comments
+  #disqus_thread
+  :javascript
+
+    var disqus_shortname = 'starrhorne';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  %noscript
+    Please enable JavaScript to view the comments.
+
