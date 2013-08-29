@@ -1,6 +1,6 @@
 ---
 title: "DIY Image Resizing Server in Sinatra: Super Easy"
-description:
+description: Learn how to build a service that does image resizing on the fly using sinatra, ruby and minimagick
 date: 2012-04-09 19:43:06 -0700
 layout: post
 ---
@@ -8,6 +8,8 @@ layout: post
 When building out officespace.com, one of the best decisions we made was
 using an image server for all of our resizing. It's *really* nice to be
 able to tweak your image size on the fly, rather than on upload.
+
+<!--more-->
 
 There are a few gems, like dragonfly, which do this. And lately, a
 number of companies have started offering image processing as a service.
@@ -69,6 +71,8 @@ resize so that the image fills up the larger dimension of the crop box.
 And that's basically it. Once you have this running, you can do a lot of neat
 tricks like watermarking, serving a placeholder if there's an error,
 etc.
+
+For a more complete example, check out the [github repo](https://github.com/starrhorne/Toy-Image-Server).
 
 
 Downsides and Caveats
